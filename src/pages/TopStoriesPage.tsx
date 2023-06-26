@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 
 const TopStoriesPage = () => {
   // const { data, error, isLoading } = useSWR('stories', () => getTopStories(1, 10))
-  const { data, isLoading, size, setSize } = useSWRInfinite((i) => `stories/${i + 1}`,
+  const { data, isLoading, setSize } = useSWRInfinite((i) => `stories/${i + 1}`,
     (key) => {
       const [,page] = key.split('/')
       return getTopStories(Number(page), 10)

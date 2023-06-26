@@ -1,8 +1,7 @@
-import useSWR from 'swr'
-import { getItemInfo } from '../services/hacker-news'
-import ListOfComments from '../components/ListOfComments'
-import { CommentLoader } from '../components/CommentLoader'
 import { useEffect } from 'react'
+import useSWR from 'swr'
+import ListOfComments from '../components/ListOfComments'
+import { getItemInfo } from '../services/hacker-news'
 
 const DetailPage = (props: {
   params: {
